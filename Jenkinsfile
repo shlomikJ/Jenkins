@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	
-	stage ('clone git project')
+	stage ('clone git project'){
 		step{
 		git 'https://github.com/shlomikJ/Jenkins/README.md'
 		script{
