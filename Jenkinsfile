@@ -13,10 +13,16 @@ pipeline {
 		}
 		
 		stage ('clone git project'){
-			String str = "/var/jenkins_home/"
-			String str1 = str.trim();
+			
 			steps {
-				
+				parameters([
+				string(
+                                defaultValue: '/var/jenkins_home/', 
+                                name: 'STR', 
+                                trim: true
+                            )
+			]
+		)
 				echo "str"
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
