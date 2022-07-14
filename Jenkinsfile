@@ -1,7 +1,7 @@
 pipeline {
 	environment {
         destDir = "/tmp/jenkins/"
-        Str= "/var/jenkins_home/"
+        
     }
 	agent any
 	stages {
@@ -15,8 +15,9 @@ pipeline {
 		stage ('clone git project'){
 			
 			steps {
-				
-				echo "$env.Str"
+				def str = "/var/jenkins_home/"
+				def str1 = str.trim()
+				echo "str"
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
 				sh 'ls -l'
