@@ -15,16 +15,7 @@ pipeline {
 		stage ('clone git project'){
 			
 			steps {
-				parameters([
-				string(
-                                defaultValue: '', 
-                                name: 'STR', 
-                                trim: true
-                            )
-			]
-		)
-				params.STR = '/var/jenkins_home/'
-				println params.STR
+				
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
 				sh 'ls -l'
