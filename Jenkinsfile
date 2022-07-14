@@ -17,8 +17,8 @@ pipeline {
 			steps {
 				
 				echo "$env.Str"
-				echo "current die: $pwd"
-				fileOperations([folderCreateOperation($env.destDir)])
+				echo "current dir: $pwd"
+				fileOperations([folderCreateOperation(${env.destDir})])
 				sh 'ls -l'
 			echo "job name is: ${env.JOB_BASE_NAME}"
 			git branch: 'master', credentialsId: 'a1fba2eb-44ba-4623-a2a8-d2b8d51e1887', url: 'https://github.com/shlomikJ/Jenkins.git'
