@@ -23,7 +23,7 @@ pipeline {
                             )
 			]
 		)
-				echo "${params.STR}"
+				println params.STR
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
 				sh 'ls -l'
