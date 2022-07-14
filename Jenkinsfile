@@ -14,7 +14,7 @@ pipeline {
 		
 		stage ('clone git project'){
 			steps {
-				echo ${env.str}.trim()
+				echo "${env.str}.trim()"
 				fileOperations([folderCreateOperation(env.baseDir)])
 				sh 'ls -l'
 			echo "job name is: ${env.JOB_BASE_NAME}"
