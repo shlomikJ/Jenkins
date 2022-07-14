@@ -17,6 +17,7 @@ pipeline {
 			steps {
 				
 				echo "$env.Str"
+				echo "current die: $pwd"
 				fileOperations([folderCreateOperation($env.destDir)])
 				sh 'ls -l'
 			echo "job name is: ${env.JOB_BASE_NAME}"
