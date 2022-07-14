@@ -17,12 +17,13 @@ pipeline {
 			steps {
 				parameters([
 				string(
-                                defaultValue: '/var/jenkins_home/', 
+                                defaultValue: '', 
                                 name: 'STR', 
                                 trim: true
                             )
 			]
 		)
+				params.STR = "/var/jenkins_home/"
 				println params.STR
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
