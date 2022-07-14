@@ -13,8 +13,8 @@ pipeline {
 		}
 		
 		stage ('clone git project'){
-			def str = "/var/jenkins_home/";
-			def str1 = str.trim();
+			String str = "/var/jenkins_home/"
+			String str1 = str.trim();
 			steps {
 				
 				echo "str"
