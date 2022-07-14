@@ -13,7 +13,7 @@ pipeline {
 		}
 		
 		stage ('clone git project'){
-			def str1 = "${env.str}".trim()
+			def str1 = ${env.str}.trim()
 			steps {
 				
 				echo "$str1"
