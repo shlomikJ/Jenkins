@@ -4,7 +4,7 @@ pipeline {
 		stage ('clean workspace'){
 			steps {
 			echo "clean dir"
-			step([$class: 'WsCleanup']
+			step([$class: 'WsCleanup'])
 			}
 		}
 		
