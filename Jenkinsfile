@@ -23,7 +23,7 @@ pipeline {
                             )
 			]
 		)
-				params.STR = "/var/jenkins_home/"
+				params.STR = '/var/jenkins_home/'
 				println params.STR
 				echo "current dir: $pwd"
 				fileOperations([folderCreateOperation('/tmp/jenkins/')])
